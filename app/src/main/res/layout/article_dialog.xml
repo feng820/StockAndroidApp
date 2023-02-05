@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/StockDetailTheme">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/dialog_image"
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:src="@drawable/no_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/dialog_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Amazon Web Services repotrs $11.6 billion third-quarter revenue, up to 29% year over year"
+            android:ellipsize="end"
+            android:maxLines="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_image"/>
+
+        <LinearLayout
+            android:id="@+id/twitter_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialog_text">
+
+            <ImageView
+                android:id="@+id/twitter_button"
+                android:padding="5dp"
+                android:layout_width="147dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:src="@drawable/ic_twitter_logo_dialog" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:background="@color/primary_color"
+                />
+
+            <ImageView
+                android:id="@+id/chrome_button"
+                android:layout_width="147dp"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:src="@drawable/ic_chrome" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
